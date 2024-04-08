@@ -1,0 +1,10 @@
+{
+  "techprimelabApp": {
+    "Type": {
+      "null": "",
+      "INTERNAL": "INTERNAL",
+      "EXTERNAL": "EXTERNAL",
+      "VENDER": "VENDER"
+    }
+  }
+}

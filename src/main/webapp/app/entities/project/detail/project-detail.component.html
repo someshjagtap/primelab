@@ -1,0 +1,74 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (project) {
+      <div>
+        <h2 data-cy="projectDetailsHeading"><span jhiTranslate="techprimelabApp.project.detail.title">Project</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ project.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.projectName">Project Name</span></dt>
+          <dd>
+            <span>{{ project.projectName }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.reason">Reason</span></dt>
+          <dd>
+            <span jhiTranslate="{{ 'techprimelabApp.Reason.' + project.reason }}">{{ project.reason }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.type">Type</span></dt>
+          <dd>
+            <span jhiTranslate="{{ 'techprimelabApp.Type.' + project.type }}">{{ project.type }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.division">Division</span></dt>
+          <dd>
+            <span jhiTranslate="{{ 'techprimelabApp.Division.' + project.division }}">{{ project.division }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.category">Category</span></dt>
+          <dd>
+            <span jhiTranslate="{{ 'techprimelabApp.Category.' + project.category }}">{{ project.category }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.priority">Priority</span></dt>
+          <dd>
+            <span jhiTranslate="{{ 'techprimelabApp.Priority.' + project.priority }}">{{ project.priority }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.department">Department</span></dt>
+          <dd>
+            <span jhiTranslate="{{ 'techprimelabApp.Department.' + project.department }}">{{ project.department }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.startDate">Start Date</span></dt>
+          <dd>
+            <span>{{ project.startDate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.endDate">End Date</span></dt>
+          <dd>
+            <span>{{ project.endDate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.location">Location</span></dt>
+          <dd>
+            <span>{{ project.location }}</span>
+          </dd>
+          <dt><span jhiTranslate="techprimelabApp.project.status">Status</span></dt>
+          <dd>
+            <span>{{ project.status }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/project', project.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
