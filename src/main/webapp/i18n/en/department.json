@@ -1,0 +1,12 @@
+{
+  "techprimelabApp": {
+    "Department": {
+      "null": "",
+      "STARTEGY": "STARTEGY",
+      "FINANCE": "FINANCE",
+      "QUALITY": "QUALITY",
+      "MENTAINANCE": "MENTAINANCE",
+      "STORES": "STORES"
+    }
+  }
+}
