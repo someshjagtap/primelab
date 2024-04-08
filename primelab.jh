@@ -17,13 +17,6 @@ entity Project {
 /** not an ignored comment */
 
 
-entity JobHistory {
-	startDate Instant
-	endDate Instant
-	language Language
-}
-
-
 enum Reason {
     BUSSINESS, DELERSHIP, TRANSPORT
 }
@@ -49,15 +42,16 @@ enum Department{
 }
 
 
-// Set pagination options
-paginate JobHistory, Employee with infinite-scroll
-paginate Job with pagination
+  // Set pagination options
+paginate * with infinite-scroll
+paginate * with pagination
 
-// Use Data Transfer Objects (DTO)
-// dto * with mapstruct
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
 
 // Set service options to all except few
-service all with serviceImpl except Employee, Job
+service * with serviceClass
 
+filter *
 // Set an angular suffix
-// angularSuffix * with mySuffix
+// angularSuffix * with tvg
